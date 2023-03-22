@@ -375,7 +375,7 @@ void app_main(void)
     esp_http_client_handle_t client = esp_http_client_init(&http_config);
 
     // POST
-    const char *post_data = "{\"content\": \"<@395462931061538816> Magic button triggered.\"}";
+    const char *post_data = "{\"content\": \"<@discord_user_id> Magic button triggered.\"}";
     esp_http_client_set_method(client, HTTP_METHOD_POST);
     esp_http_client_set_header(client, "Content-Type", "application/json");
     esp_http_client_set_post_field(client, post_data, strlen(post_data));
